@@ -9,26 +9,26 @@ void main() {
       // Title
       title: "Act 5 ANDROID",
       // Home
-      home: MiCasa()));
-}
+      home: CasaSusi()));
+}// fin de main
 
-class MiCasa extends StatefulWidget {
+class CasaSusi extends StatefulWidget {
   @override
-  MiCasaState createState() => MiCasaState();
+  CasaSusiState createState() => CasaSusiState();
 } //fin clase mi casa
 
-class MiCasaState extends State<MiCasa> with SingleTickerProviderStateMixin {
+class CasaSusiState extends State<CasaSusi> with SingleTickerProviderStateMixin {
   TabController controller;
   @override
   void initState() {
     super.initState();
-    // Initialize the Tab Controller
+    // Initialize the Tab Controller (iniciar tab controller)
     controller = TabController(length: 3, vsync: this);
-  } //fin de iniciar estado
+  } //fin de iniciar estado 
 
   @override
   void dispose() {
-    // Dispose of the Tab Controller
+    // Dispose del Tab Controller
     controller.dispose();
     super.dispose();
   } //fin de dispose
@@ -36,11 +36,10 @@ class MiCasaState extends State<MiCasa> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Appbar
       appBar: AppBar(
         title: Text("Bottom Navigation Bar de Susi"),
         backgroundColor: Colors.grey[800],
-      ), //finappbar
+      ), //fin del appbar
       body: TabBarView(
         children: <Widget>[
           PrimerTab(),
@@ -50,25 +49,22 @@ class MiCasaState extends State<MiCasa> with SingleTickerProviderStateMixin {
         controller: controller,
       ),
       bottomNavigationBar: Material(
-        // set the color of the bottom navigation bar
         color: Colors.grey.shade400,
-        // set the tab bar as the child of bottom navigation bar
         child: TabBar(
           tabs: <Tab>[
             Tab(
-              // set icon to the tab
               icon: Icon(Icons.receipt),
-            ),
+            ),// icono de "recepcion"
             Tab(
               icon: Icon(Icons.mood),
-            ),
+            ),// icono carita feliz
             Tab(
               icon: Icon(Icons.ramen_dining),
-            ),
+            ),// icono de maruchan
           ],
           controller: controller,
-        ), //fin chiltabar
+        ), //fin child tapbar
       ), //fin de bottom navigator
     ); //fin de scaffold
   } //fin widget
-} //fin del main
+} //fin de class casasusi
