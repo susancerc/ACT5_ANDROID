@@ -8,22 +8,21 @@ class TercerTab extends StatelessWidget {
       body: Container(
         child: Center(
           child: Column(
-            // center the children
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Icon(
                 Icons.ramen_dining,
                 size: 160.0,
                 color: Colors.white,
-              ),
+              ),// fin de icon
               Text(
                 "Nuestros platillos",
                 style: TextStyle(color: Colors.white),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+              )// fin de text
+            ],// fin de children widget
+          ),// fin de column
+        ),// fin child center
+      ),// fin container
+    );// fin de scaffold
+  }// fi widget build
+}// fin tercertab
